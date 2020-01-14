@@ -188,7 +188,7 @@ static void cyclelayout(const Arg *arg);
 static void destroynotify(XEvent *e);
 static void detach(Client *c);
 static void detachstack(Client *c);
-static Monitor *dirtomon(int dir);
+// static Monitor *dirtomon(int dir);
 static void drawbar(Monitor *m);
 static void drawbars(void);
 static void enqueue(Client *c);
@@ -197,7 +197,7 @@ static void enternotify(XEvent *e);
 static void expose(XEvent *e);
 static void focus(Client *c);
 static void focusin(XEvent *e);
-static void focusmon(const Arg *arg);
+// static void focusmon(const Arg *arg);
 static void focusstack(const Arg *arg);
 static Atom getatomprop(Client *c, Atom prop);
 static int getrootptr(int *x, int *y);
@@ -206,7 +206,7 @@ static unsigned int getsystraywidth();
 static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
 static void grabbuttons(Client *c, int focused);
 static void grabkeys(void);
-static void incnmaster(const Arg *arg);
+// static void incnmaster(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
@@ -245,7 +245,7 @@ static void sigchld(int unused);
 static void spawn(const Arg *arg);
 static Monitor *systraytomon(Monitor *m);
 static void tag(const Arg *arg);
-static void tagmon(const Arg *arg);
+// static void tagmon(const Arg *arg);
 static void tile(Monitor *);
 static void togglealttag();
 static void togglebar(const Arg *arg);
@@ -804,6 +804,7 @@ detachstack(Client *c)
 	}
 }
 
+/*
 Monitor *
 dirtomon(int dir)
 {
@@ -818,6 +819,7 @@ dirtomon(int dir)
 		for (m = mons; m->next != selmon; m = m->next);
 	return m;
 }
+*/
 
 void
 drawbar(Monitor *m)
@@ -972,6 +974,7 @@ focusin(XEvent *e)
 		setfocus(selmon->sel);
 }
 
+/*
 void
 focusmon(const Arg *arg)
 {
@@ -985,6 +988,7 @@ focusmon(const Arg *arg)
 	selmon = m;
 	focus(NULL);
 }
+*/
 
 void
 focusstack(const Arg *arg)
@@ -1137,12 +1141,14 @@ grabkeys(void)
 	}
 }
 
+/*
 void
 incnmaster(const Arg *arg)
 {
 	selmon->nmaster = MAX(selmon->nmaster + arg->i, 0);
 	arrange(selmon);
 }
+*/
 
 #ifdef XINERAMA
 static int
@@ -1955,6 +1961,7 @@ tag(const Arg *arg)
 	}
 }
 
+/*
 void
 tagmon(const Arg *arg)
 {
@@ -1962,6 +1969,7 @@ tagmon(const Arg *arg)
 		return;
 	sendmon(selmon->sel, dirtomon(arg->i));
 }
+*/
 
 void
 tile(Monitor *m)
