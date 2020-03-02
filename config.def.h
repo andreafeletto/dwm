@@ -14,12 +14,12 @@ static const char dmenufont[]       = "monospace:size=10";
 static const char col_black[]       = "#000000";
 static const char col_white[]       = "#ffffff";
 static const char col_gray[]        = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_accent[]      = "#F92672";
 static const char *colors[][3]      = {
 	/*                fg         bg         border   */
-	[SchemeNorm]  = { col_gray,  col_black, col_black },
-	[SchemeSel]   = { col_black, col_gray,  col_cyan  },
- 	[SchemeTitle] = { col_gray,  col_black, col_black },
+	[SchemeNorm]  = { col_gray,  col_black, col_black  },
+	[SchemeSel]   = { col_black, col_gray,  col_accent },
+ 	[SchemeTitle] = { col_gray,  col_black, col_black  },
 };
 
 /* tagging */
