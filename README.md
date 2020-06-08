@@ -20,6 +20,7 @@ sudo make install clean
 * [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts)
 * [noborder](https://dwm.suckless.org/patches/noborder)
 * [alternativetags](https://dwm.suckless.org/patches/alternativetags)
+* [swallow](https://dwm.suckless.org/patches/swallow)
 
 ## Other tweaks
 Added config.h to `make clean` because patches always target config.def.h.

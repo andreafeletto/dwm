@@ -3,6 +3,7 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 4;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -27,8 +28,9 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const char *tagsalt[] = { "a", "b", "c", "d", "e", "f", "g", "h", "i" };
 
 static const Rule rules[] = {
-	/* class      instance    title       tags mask     isfloating   monitor */
-        { NULL,       NULL,       NULL,       0,            False,       -1 }
+	/* class       instance title tagmask isfloat isterm noswallow monitor */
+	{ "st",        NULL,    NULL, 0,      0,      1,     -1,       -1 },
+	{ "Alacritty", NULL,    NULL, 0,      0,      1,     -1,       -1 },
 };
 
 /* layout(s) */
